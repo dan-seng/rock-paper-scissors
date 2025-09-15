@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game</title>
+        <title>Rock Paper Scissors Game</title>
+        <link rel="icon" type="image/png" href="public/dan-softwares.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
@@ -12,7 +13,10 @@
         <h1>ROCK PAPER SCISSOR</h1>
         <p class="legend-text">Rock = &#9994 Paper = &#9995 Scissor = &#9996</p>
       </div>
-      <button class="but-style" id="addClassButton" onclick="darkTheme()">Light/Night</button>
+      <button class="theme-toggle" id="addClassButton" onclick="toggleTheme()">
+        <i class="fas fa-sun" style="display: none;"></i>
+        <i class="fas fa-moon" style="display: inline-block;"></i>
+      </button>
    </div>
      
        <div class="buttons">

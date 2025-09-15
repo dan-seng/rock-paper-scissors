@@ -106,12 +106,12 @@ function pickComputerMove(){
        <div class="container">
        <h1>Rock, Paper, Scissors Game Rules</h1>
        <div class="emoji">
-           ✊️ <span>Rock</span>, ✋️ <span>Paper</span>, ✌️ <span>Scissors</span>
+           &#9994 <span>Rock</span>, &#9995 <span>Paper</span>, &#9996 <span>Scissors</span>
        </div>
        <div class="rule">
-           <p><span class="rock">Rock ✊️</span> beats <span class="scissors"> Scissors ✌️</span>.</p>
-           <p><span class="scissors">Scissors ✌️</span> beats <span class="paper"> Paper ✋️</span>.</p>
-           <p><span class="paper">Paper ✋️</span> beats <span class="rock"> Rock ✊️</span>.</p>
+           <p><span class="rock">Rock &#9994</span> beats <span class="scissors"> Scissors &#9996</span>.</p>
+           <p><span class="scissors">Scissors &#9996</span> beats <span class="paper"> Paper &#9995</span>.</p>
+           <p><span class="paper">Paper &#9995</span> beats <span class="rock"> Rock &#9994</span>.</p>
        </div>
    </div>
        `;
@@ -127,12 +127,34 @@ function pickComputerMove(){
        document.body.style.backgroundColor = color;
    }
 
-const button = document.getElementById('addClassButton');
-const body = document.body;
-const whole = document.getElementById('whole');
-button.addEventListener('click', () => {
-body.classList.toggle('highlight');
-whole.classList.toggle('highlight');
+// Theme toggle functionality
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('light-mode');
+    
+    // Toggle between sun and moon icons
+    const sunIcon = document.querySelector('.theme-toggle .fa-sun');
+    const moonIcon = document.querySelector('.theme-toggle .fa-moon');
+    
+    if (body.classList.contains('light-mode')) {
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
+    } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
+    }
+}
+
+// Set dark mode as default when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const sunIcon = document.querySelector('.theme-toggle .fa-sun');
+    const moonIcon = document.querySelector('.theme-toggle .fa-moon');
+    
+    // Ensure dark mode is set by default
+    body.classList.remove('light-mode');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'inline-block';
 });
    
  
