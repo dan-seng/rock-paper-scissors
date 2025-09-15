@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+      <div class="xx">
+   <div class="heading">
+      <div class="heading-content">
+        <h1>ROCK PAPER SCISSOR</h1>
+        <p class="legend-text">Rock = &#9994 Paper = &#9995 Scissor = &#9996</p>
+      </div>
+      <button class="but-style" id="addClassButton" onclick="darkTheme()">Light/Night</button>
+   </div>
+     
+       <div class="buttons">
+            <button class="xbut" onclick="playGame('Rock'); ">&#9994</button>
+        <button class="xbut"  onclick=" playGame('Paper'); " >&#9995</button>
+        <button class="xbut" onclick=" playGame('Scissors');">&#9996</button>
+        </div>
+		<div class="xreset">
+			<button class="reset" onclick=" 
+            scores.wins=0;
+            scores.losses=0;
+            scores.ties=0;
+            localStorage.removeItem('score');
+            updateScore();
+        " >Reset Score</button>
+        <button class="auto"
+        onclick="autoPlay()"  
+        >Auto Play</button>
+		</div>
+        <div class="reuss">
+            <div class="pp">
+                <p class="js-result">Result goes here</p>
+                <p class="js-choice">Your choice goes here</p>
+                <p class="Js-score"> </p>
+            </div>
+
+        </div>
+        <div class="link">
+            <h3>Pick background color 
+                <input type="color" class="input-color" name="bg-color" id="bg-color" onclick="changeTheme()">
+            </h3>
+            <h3>If you don't have any idea on how to play this game please click the button below</h3>
+           <button class="buttonistic"  onclick="instruction()">How to Play</button> 
+        </div>
+        <div class="instruction" style="text-align: center;">
+            
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">&#169; Daniel Gidey</div>
+                <div class="social-links">
+                    <a href="https://github.com/dan-seng" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/_dan_el" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/251945012123" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com/dan16son" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="mailto:da16gi@gmail.com" class="social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+   </div> 
+       
+<script src="script.js">
+</script>
+    </body>
+</html>
